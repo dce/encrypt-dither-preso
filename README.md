@@ -7,6 +7,37 @@ Dev Meeting, 2024-02-13
 
 ## 1. Intro
 
+* Building a personal website with [Hugo](https://gohugo.io/) for the last ~year
+* It includes high-res photos of my family
+* <http://localhost:1314/journal/dispatch-11-january-2024/>
+
+---
+
+## 1. Intro
+
+* When I was first setting up the site, I wanted to give photos a monochrome, dithered treatment
+  * <https://solar.lowtechmagazine.com/>
+  * E-ink
+* Hugo has [cool stuff for image processing](https://gohugo.io/content-management/image-processing/) but not dithering
+
+---
+
+## 1. Intro
+
+* Read [this post](https://elliotjaystocks.com/blog/2023-in-review) where he's pretty adament about not putting pictures of his kids online
+* Inspired me to take another crack at dithering
+  * Good balance
+* Additionally, site is [open source](https://github.com/dce/davideisinger.com), so needed a way to keep images off of GH, as well
+
+---
+
+## 1. Intro
+
+* Tried dithering via terminal w/ ImageMagick, then resizing as usual in Hugo
+  * Results were bad
+* Stumbled on [resources.GetRemote](https://gohugo.io/content-management/image-processing/#remote-resource) and had the idea for a separate image process
+* Then shit was ON
+
 ---
 
 ## 2. Encrypt all images
