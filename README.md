@@ -87,6 +87,8 @@ end
 
 ## 3. Build a tiny image server
 
+* [Sinatra](https://sinatrarb.com/)
+* [MiniMagick](https://github.com/minimagick/minimagick)
 * [dither.rb](https://github.com/dce/davideisinger.com/blob/main/bin/dither/dither.rb)
 
 ---
@@ -98,6 +100,30 @@ end
 ---
 
 ## 4. Create a Hugo shortcode
+
+Allow `DITHER_SERVER` environment variable:
+
+```toml
+[security.funcs]
+getenv = ['DITHER_SERVER']
+```
+
+---
+
+## 4. Create a Hugo shortcode
+
+Start Hugo:
+
+```sh
+DITHER_SERVER=http://localhost:4567 hugo server
+```
+
+---
+
+## 4. Create a Hugo shortcode
+
+* [dither.html](https://github.com/dce/davideisinger.com/blob/main/themes/v2/layouts/shortcodes/dither.html)
+* [Example](https://github.com/dce/davideisinger.com/blob/main/content/journal/dispatch-12-february-2024/index.md?plain=1#L84-L85)
 
 ---
 
@@ -137,6 +163,7 @@ img {
 ## 7. Update deploy workflow
 
 * [deploy.yml](https://github.com/dce/davideisinger.com/blob/main/.github/workflows/deploy.yml)
+
 ---
 
 ## 8. Share your work
@@ -148,3 +175,7 @@ img {
 ---
 
 ## 9. Conclusion
+
+* Hugo's pretty neat
+* Build small things
+* Share your work
