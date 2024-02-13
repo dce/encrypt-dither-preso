@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require 'json'
+
+puts "(#{Time.now}) Building ..."
+
+TITLE_PLACEHOLDER = '<!-- title -->'
+CONTENT_PLACEHOLDER = '<!-- content -->'
+
+config = JSON.parse(File.read('config.json'))
+template = File.read('template.html')
+
+content = template
+          .gsub(TITLE_PLACEHOLDER, config.fetch('title'))
+          .gsub(CONTENT_PLACEHOLDER, File.read(config.fetch('content')))
+
+File.open('index.html', 'w') do |index|
+  index.write(content)
+end
